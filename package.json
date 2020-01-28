@@ -1,0 +1,85 @@
+{
+  "name": "stepbar",
+  "version": "1.0.0",
+  "description": "Barra de pasos de aplicación",
+  "author": "Equipo Rocket <Coopeuch>",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c && npm publish",
+    "start": "rollup -c -w"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "engines": {
+    "node": ">=9",
+    "npm": ">=6"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-url": "^4.0.1",
+    "@svgr/rollup": "^2.4.1",
+    "babel-eslint": "10.0.2",
+    "babel-jest": "^24.9.0",
+    "casual": "^1.6.2",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "24.8.0",
+    "jest-transform-css": "^2.0.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.1",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "sinon": "^7.4.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 60,
+        "lines": 80,
+        "statements": 60
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ],
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
+    }
+  }
+}
